@@ -1,46 +1,7 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
-
-const generateHTML = ({title, description, installation, usage, license, contributing, tests, github, email}) =>
-`# ${title}
-
-## Description
-
-${description}
-
-## Table of Contents
-
-    [Installation](#installation)
-    [Usage](#usage)
-    [License](#license)
-    [Contributing](#contributing)
-    [Tests](#tests)
-    [Questions](#questions)
-
-## Installation
-
-${installation}
-
-## Usage
-
-${usage}
-
-## License
-
-${license}
-
-## Contributing
-
-${contributing}
-
-## Tests
-
-${tests}
-
-## Questions
-
-If you have any questions regarding this project, you can contact me through my GitHub profile ${github} or email me at ${email}`;
+const inquirer = require(`inquirer`);
+const fs = require(`fs`);
+const generateMarkdown = require(`./utils/generateMarkdown`)
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -68,7 +29,7 @@ const questions = [
         type: `list`,
         name: `license`,
         message: `Which of the following licenses would you like to use?`,
-        choices: [`None`, `Apache License 2.0`, `GNU License`, `MIT License`, `BSD License`, `Boost Software License 1.0`, `Creative Commons Zero`, `Mozilla Public License 2.0`, `The Unilicense`],
+        choices: [`None`, `Apache License 2.0`, `GNU GPL v3`, `MIT License`, `BSD License`, `Boost Software License 1.0`, `Creative Commons Zero`, `Mozilla Public License 2.0`, `The Unilicense`],
     },
     {
         type: `input`,
@@ -101,7 +62,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const file = `README.md`;
-        writeToFile(file, generateHTML(answers));
+        writeToFile(file, generateMarkdown(answers));
       });
 }
 
