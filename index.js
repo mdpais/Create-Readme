@@ -29,7 +29,7 @@ const questions = [
         type: `list`,
         name: `license`,
         message: `Which of the following licenses would you like to use?`,
-        choices: [`None`, `Apache License 2.0`, `GNU GPL v3`, `MIT License`, `BSD License`, `Boost Software License 1.0`, `Creative Commons Zero`, `Mozilla Public License 2.0`, `The Unilicense`],
+        choices: [`None`, `Apache License 2.0`, `GNU GPL v3`, `MIT License`, `BSD 3-Clause License`, `Boost Software License 1.0`, `Creative Commons Zero`, `Mozilla Public License 2.0`, `The Unilicense`],
     },
     {
         type: `input`,
