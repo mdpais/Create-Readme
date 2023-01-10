@@ -3,12 +3,14 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateHTML = ({title, description, installation, usage, license, contributing, tests, github, email}) =>
-`#${title}
+`# ${title}
 
-##Description
-/n${description}
+## Description
 
-##Table of Contents
+${description}
+
+## Table of Contents
+
     [Installation](#installation)
     [Usage](#usage)
     [License](#license)
@@ -16,22 +18,28 @@ const generateHTML = ({title, description, installation, usage, license, contrib
     [Tests](#tests)
     [Questions](#questions)
 
-##Installation
+## Installation
+
 ${installation}
 
-##Usage
+## Usage
+
 ${usage}
 
-##License
+## License
+
 ${license}
 
-##Contributing
+## Contributing
+
 ${contributing}
 
-##Tests
+## Tests
+
 ${tests}
 
-##Questions
+## Questions
+
 If you have any questions regarding this project, you can contact me through my GitHub profile ${github} or email me at ${email}`;
 
 // TODO: Create an array of questions for user input
