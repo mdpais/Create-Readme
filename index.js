@@ -6,7 +6,7 @@ const generateHTML = ({title, description, installation, usage, license, contrib
 `#${title}
 
 ##Description
-${description}
+/n${description}
 
 ##Table of Contents
     [Installation](#installation)

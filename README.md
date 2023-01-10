@@ -1,7 +1,7 @@
-#Title
+#Test Readme
 
 ##Description
-Description
+/nTesting the project
 
 ##Table of Contents
     [Installation](#installation)
@@ -12,19 +12,19 @@ Description
     [Questions](#questions)
 
 ##Installation
-install
+Install inquirer v8.2.4
 
 ##Usage
-instructions
+Node index.js
 
 ##License
 MIT License
 
 ##Contributing
-install
+Be nice
 
 ##Tests
-test
+npm test
 
 ##Questions
 If you have any questions regarding this project, you can contact me through my GitHub profile git or email me at email
