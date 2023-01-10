@@ -84,15 +84,16 @@ const questions = [
     }];
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(`README.md`, generateHTML(), err =>
-//     err? console.log(`An error was encountered while creating the readme file.` : console.log(`Your readme file was successfully created!`)))
-// }
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(`An error was encountered while creating the readme file.`) : console.log(`Your readme file was successfully created!`))
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        console.log(answers);
+        const file = `README.md`;
+        writeToFile(file, generateHTML(answers));
       });
 }
 
