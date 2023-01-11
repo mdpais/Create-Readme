@@ -20,11 +20,11 @@
   
   ## Installation
   
-  The project uses inquirer, so the user must first run "npm install inquirer@8.2.4" in Git Bash.
+  The project uses inquirer, so the user must first run "npm install inquirer@8.2.4" in Visual Studio Code (with Node.js already installed).
   
   ## Usage
   
-  To run the project simply type "node index.js" in Git Bash and hit enter.
+  To run the project simply type "node index.js" in Visual Studio Code and hit enter.
 
   ## Screenshot
 
